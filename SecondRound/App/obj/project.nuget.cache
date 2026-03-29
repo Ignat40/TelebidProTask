@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "WStI5x/LCgQ=",
+  "success": true,
+  "projectFilePath": "/Users/ignat/Desktop/everything/TelebidPro/TelebigProTask/SecondRound/App/App.csproj",
+  "expectedPackageFiles": [
+    "/Users/ignat/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.0/microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+    "/Users/ignat/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.0/microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "/Users/ignat/.nuget/packages/npgsql/10.0.2/npgsql.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

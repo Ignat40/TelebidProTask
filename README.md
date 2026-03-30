@@ -83,7 +83,7 @@ reportgenerator -reports:**/coverage.cobertura.xml -targetdir:coverage-report
 The developing language of choice 
 
 #### Custom HTTP Server
-Insted of using framework, the HTTP communicaiton was created using TcpListener, parsing the HTTP request, routing and generating a HTTP response
+Instead of using framework, the HTTP communication was created using TcpListener, parsing the HTTP request, routing and generating a HTTP response
 
 #### PostgreSQL 
 Using a relational database for storing the user data and active sessions
@@ -111,7 +111,7 @@ Used for covering over 80% of the code base
 #### Coverlet / XPlay Code Coverage
 Used to calculate the above-mentioned code base coverage 
 
-![Code %](/TelebigProTask/SecondRound/code_coverage.png "Screenshot of the code coverage")
+![Code %](/TelebigProTask/images/code_coverage.png)
 
 ---
 
@@ -138,7 +138,7 @@ Handles the core logic
 
 #### 4. Data access layer
 
-Works directly with PostreSQL through Npsql and SQL queries
+Works directly with PostreSQL through Npgsql and SQL queries
 
 #### 5. View layer
 
@@ -351,7 +351,7 @@ I have used standard and built-in functions where appropriate, without relying o
 ### .NET / C#
 
 * `TcpListener`
-  To accpets HTTP requests
+  To accepts HTTP requests
 
 * `StreamReader` / `NetworkStream`
   To read HTTP request

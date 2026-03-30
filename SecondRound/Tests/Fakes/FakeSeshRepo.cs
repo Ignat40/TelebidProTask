@@ -3,7 +3,7 @@ using App.Models;
 
 namespace Tests.Fakes;
 
-public class FakeSessionRepository : ISeshRepo
+public class FakeSessionRepo : ISeshRepo
 {
     private readonly List<Session> _sessions = new();
 

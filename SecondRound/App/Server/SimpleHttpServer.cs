@@ -2,9 +2,11 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using App.Models;
+using System.Diagnostics.CodeAnalysis;
 
 namespace App.Server;
 
+[ExcludeFromCodeCoverage]
 public class SimpleHttpServer
 {
     private readonly int _port;

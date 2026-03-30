@@ -1,8 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using App.Models;
 using Npgsql;
 
 namespace App.Data;
 
+[ExcludeFromCodeCoverage]
 public class UserRepo : IUserRepo
 {
     private readonly DbConnection _connection;

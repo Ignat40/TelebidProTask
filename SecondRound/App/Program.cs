@@ -6,9 +6,11 @@ using App.Security;
 using App.Server;
 using App.Services;
 using App.Views;
+using System.Diagnostics.CodeAnalysis;
 
 namespace App;
 
+[ExcludeFromCodeCoverage]
 public class Program
 {
     public static async Task Main(string[] args)

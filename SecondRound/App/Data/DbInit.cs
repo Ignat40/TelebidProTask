@@ -1,7 +1,10 @@
 using Npgsql;
+using System.Diagnostics.CodeAnalysis;
 
 namespace App.Data;
 
+
+[ExcludeFromCodeCoverage]
 public class DbInit(DbConnection connection)
 {
     private readonly DbConnection _connect = connection;

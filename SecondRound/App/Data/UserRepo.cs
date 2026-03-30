@@ -3,11 +3,11 @@ using Npgsql;
 
 namespace App.Data;
 
-public class UserRepository : IUserRepo
+public class UserRepo : IUserRepo
 {
     private readonly DbConnection _connection;
 
-    public UserRepository(DbConnection connection)
+    public UserRepo(DbConnection connection)
     {
         _connection = connection;
     }

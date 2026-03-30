@@ -18,7 +18,7 @@ public class DbInit(DbConnection connection)
                 first_name VARCHAR(100) NOT NULL,
                 last_name VARCHAR(100) NOT NULL,
                 password_hash TEXT NOT NULL,
-                passward_salt TEXT NOT NULL,
+                password_salt TEXT NOT NULL,
                 created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             );
         """;

@@ -10,7 +10,7 @@ public class SessionServiceTests
     public async Task CreateSessionAsync_ReturnsToken()
     {
         var sessionRepo = new FakeSessionRepository();
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var service = new SessionServices(sessionRepo, userRepo);
 
         var token = await service.CreateSessionAsync(1);
@@ -22,7 +22,7 @@ public class SessionServiceTests
     public async Task GetUserBySessionTokenAsync_ReturnsUser_ForValidSession()
     {
         var sessionRepo = new FakeSessionRepository();
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
 
         userRepo.Seed(new User
         {
@@ -52,7 +52,7 @@ public class SessionServiceTests
     public async Task GetUserBySessionTokenAsync_ReturnsNull_ForExpiredSession()
     {
         var sessionRepo = new FakeSessionRepository();
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
 
         await sessionRepo.CreateAsync(new Session
         {

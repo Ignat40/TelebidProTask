@@ -10,7 +10,7 @@ public class AuthServiceTests
     [Fact]
     public async Task RegisterAsync_ReturnsFailure_ForInvalidCaptcha()
     {
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var sessionRepo = new FakeSessionRepository();
 
         var sessionService = new SessionServices(sessionRepo, userRepo);
@@ -36,7 +36,7 @@ public class AuthServiceTests
     [Fact]
     public async Task RegisterAsync_ReturnsFailure_ForDuplicateEmail()
     {
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var sessionRepo = new FakeSessionRepository();
 
         userRepo.Seed(new User
@@ -71,7 +71,7 @@ public class AuthServiceTests
     [Fact]
     public async Task RegisterAsync_ReturnsSuccess_ForValidData()
     {
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var sessionRepo = new FakeSessionRepository();
 
         var sessionService = new SessionServices(sessionRepo, userRepo);
@@ -97,7 +97,7 @@ public class AuthServiceTests
     [Fact]
     public async Task LoginAsync_ReturnsFailure_ForWrongPassword()
     {
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var sessionRepo = new FakeSessionRepository();
         var passwordHasher = new PasswordHasher();
         var hashed = passwordHasher.HashPassword("StrongPass1!");
@@ -128,7 +128,7 @@ public class AuthServiceTests
     [Fact]
     public async Task LoginAsync_ReturnsSuccess_ForCorrectCredentials()
     {
-        var userRepo = new FakeUserRepository();
+        var userRepo = new FakeUserRepo();
         var sessionRepo = new FakeSessionRepository();
         var passwordHasher = new PasswordHasher();
         var hashed = passwordHasher.HashPassword("StrongPass1!");

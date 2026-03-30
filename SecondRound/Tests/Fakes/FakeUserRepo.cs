@@ -3,7 +3,7 @@ using App.Models;
 
 namespace Tests.Fakes;
 
-public class FakeUserRepository : IUserRepo
+public class FakeUserRepo : IUserRepo
 {
     private readonly List<User> _users = new();
     private int _nextId = 1;

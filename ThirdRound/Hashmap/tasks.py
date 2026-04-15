@@ -117,8 +117,50 @@ def combine_two_dict_by_adding_value(d1, d2):
         
     return result
 
+# Given an array arr[], the task is to find the 
+# maximum distance between two occurrences of an element.
+# If no element has two occurrences, then return 0.
+
+def max_dist(arr):
+    
+    count = 0
+    hashmap = {}
+    
+    for i in range(len(arr)):
+        if arr[i] not in hashmap:
+            hashmap[arr[i]] = i
+        else: 
+            count = max(count, i - hashmap[arr[i]])    
+            
+    return count
+        
+def intersect(arr1, arr2):
+   
+    hashmap = {}
+    dups = []
+    
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            if arr1[i] == arr2[j] and arr1[i] not in hashmap:
+                hashmap[arr1[i]] = 1
+                dups.append(arr1[i])
+               
+                
+    return dups
+
+def count_pairs_sum(arr, target): 
+    
+    pairs = [list]
+    
+    for i in range(len(arr)):
+        
+        
+    
+
 if __name__ == '__main__':
     d1 = {'a': 100, 'b': 200, 'c':300}
     d2 = {'a': 300, 'b': 200, 'd':400}
+    a = [1, 2, 1, 3, 1]
+    b = [3, 1, 3, 4, 1]
     
-    print(combine_two_dict_by_adding_value(d1, d2))
+    print(intersect(a, b))

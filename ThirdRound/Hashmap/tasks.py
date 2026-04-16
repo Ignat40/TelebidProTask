@@ -150,17 +150,34 @@ def intersect(arr1, arr2):
 
 def count_pairs_sum(arr, target): 
     
-    pairs = [list]
+    pairs = []
     
     for i in range(len(arr)):
+        for j in range(i, len(arr)):
+            if abs(arr[i]- arr[j]) == target:
+                pairs.append([arr[i], arr[j]])
+                
+                          
+    return pairs
         
+def remove_min_el(a, b):
+    hashmap = {}
+    count = 0 
+    
+    for i in range(len(a)):
+        hashmap[i] = a[i]
         
+    for j in range(len(b)):
+        if b[j] in hashmap.values():
+            count += 1
+
+    return count
     
 
 if __name__ == '__main__':
     d1 = {'a': 100, 'b': 200, 'c':300}
     d2 = {'a': 300, 'b': 200, 'd':400}
-    a = [1, 2, 1, 3, 1]
-    b = [3, 1, 3, 4, 1]
+    a = [2, 3, 4, 5, 8]
+    b = [1, 2, 3, 4]
     
-    print(intersect(a, b))
+    print(remove_min_el(a, b))

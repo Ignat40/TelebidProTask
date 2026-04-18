@@ -39,24 +39,11 @@ def max_sum_of_subarray(arr, k):
         
     return max_sum
 
-def smallest_cantains(strs, sub_str): # unfinished 
-    
-    seen = set(sub_str)
-    left = 0 
-    longest = 0 
-    
-    for right in range(len(strs)):
-        while left in seen:
-            seen.remove(strs[left])
-            left += 1
-        
-        cur = (right - left) + 1
-        longest = max(longest + cur)
-    
-    return longest
+
+            
     
     
 
-print(smallest_cantains("01212", "012"))
+print(per_of_pat("geeks", "eke"))
 
 
